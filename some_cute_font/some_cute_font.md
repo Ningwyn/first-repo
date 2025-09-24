@@ -21,8 +21,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 ```
 ![img_4.png](img/img_4.png)
-# Baloo 2
+# "Baloo 2"
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
 ```
 ![img_5.png](img/img_5.png)
+# fantasy
+直接用
+![img_6.png](img/img_6.png)
