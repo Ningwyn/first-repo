@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Little Menu by Yining~</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: rgba(244, 201, 136, 0.32); /* 整体背景色 */
+            margin: 0;
+            padding: 8px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;               /* 设置线条粗细 */
+            background-color: rgba(244, 201, 136, 0.32); /* 设置线条颜色 */
+        }
+
+        header, main, footer {
+            background-color: #FFFFFF; /* 区块背景色 */
+            border-radius: 20px; /* 圆角 */
+            padding: 20px;
+            margin-bottom: 20px; /* 每个部分之间留空隙 */
+        }
+
+        header {
+            text-align: center;
+            color: #df9930;
+        }
+        header img {
+            display: block;
+            margin: 0 auto;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex; /*横向排列而非竖向排列*/
+            justify-content: center;
+            gap: 20px; /*两个li之间的距离*/
+        }
+        nav a {
+            text-decoration: none;
+            color: rgb(244, 201, 136);
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff6600;
+        }
+
+        h2 {
+            text-align: center
+        }
+
+        /* 菜单项横向排列 */
+        section#menu article {
+            display: flex;
+            gap: 50px; /* 图片和文字之间的间距 */
+        }
+        /* 图片固定大小 */
+        section#menu article img {
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+        }
+
+        input[type="submit"] {
+            background-color: rgba(221, 114, 7, 0.77);
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgba(149, 77, 5, 0.77);
+        }
+
+        footer {
+            text-align: right;
+            font-size: 14px;
+            color: rgba(149, 77, 5, 0.77);
+            padding: 5px;
+        }
+
+        /* 限制 order 区域里的 number 输入框宽度 */
+        #order-form input[type="number"] {
+            width: 40px;
+            padding: 1px;
+            margin-bottom: 5px;
+        }
+        #order-form label {
+            display: inline-block;
+            width: 120px;  /* 控制 label 的宽度 */
+        }
+
+        .submit {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <img id="header-img" src="img/Logo.png" alt="Restaurant Logo" height="200" width="200">
+    <h1>Little Restaurant</h1>
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order-form">Order</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="menu">
+        <h2>Menu</h2>
+        <article>
+            <img src="img/CurryBeef.png" alt="Beef Curry">
+            <div class="menu-text">
+                <h3>Beef Curry</h3>
+                <p>Price: <i>$17</i></p>
+                <p>🌶️🌶</p>
+                <p>Beef, Curry, Potato, Carrot, Onion</p>
+            </div>
+        </article>
+        <br><hr>
+        <article>
+            <img src="img/Rice.png" alt="Shrimp Fried Rice">
+            <div class="menu-text">
+                <h3>Shrimp Fried Rice</h3>
+                <p>Price: <i>$13</i></p>
+                <p>Egg, Rice, Shrimp, Pea, Carrot</p>
+            </div>
+        </article>
+        <br><hr>
+        <article>
+            <img src="img/ChickenWings.png" alt="Braised chicken wings">
+            <div class="menu-text">
+                <h3>Braised chicken wings</h3>
+                <p>Price: <i>$23</i></p>
+                <p>🌶️</p>
+                <p>Chicken Wing, Soy Sauce</p>
+            </div>
+        </article>
+    </section>
+    <section id="order-form">
+        <h2>Order</h2>
+        <form>
+            <div>
+            <h3>Number of Items</h3>
+            <label>Beef Curry </label><input type="number" min="0"> <br>
+            <label>Shrimp Curry </label><input type="number" min="0"> <br>
+            <label>Egg Curry </label><input type="number" min="0"> <br>
+            </div>
+
+            <div>
+            <h3>Choose sides and add-ons</h3>
+            <input type="checkbox" name="sides"> Spicy
+            <input type="checkbox" name="sides"> Soy Sauce
+            <input type="checkbox" name="sides"> Salad
+            </div>
+
+            <div>
+            <h3>Special Requests Here:</h3>
+            <textarea rows="4" cols="50" placeholder="Please add your special requests here."></textarea>
+            <br><br>
+            </div>
+
+            <div class="submit">
+            <input type="submit" value="Go To Checkout">
+            </div>
+
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Made with love by @wynnn </p>
+</footer>
+</body>
+</html>
